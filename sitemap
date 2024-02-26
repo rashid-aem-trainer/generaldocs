@@ -1,0 +1,38 @@
+Title: Advancing Sitemap Management in Adobe Experience Manager (AEM)
+
+Subtitle: Enhancing Sitemap Generation for Comprehensive Website Indexing
+
+Existing Core Implementation:
+The Adobe Core Sitemap offers two methods for generating sitemaps:
+
+On-Demand Generation: Suitable for websites with relatively fewer content pages, this method involves calling a servlet to generate the sitemap dynamically. The servlet iterates through the pages under a designated base page marked as the site root page, with the page property sling:sitemapRoot set to true.
+
+Sitemap Scheduler: Designed for larger websites, this approach involves running a scheduler that automatically creates sitemap files. These files are stored in a configurable path (default: /var/sitemaps). The stored sitemaps are then accessed by a servlet and served whenever a request reaches the server for the servlet. The scheduler typically runs once a day, updating the generated sitemap.
+
+Additionally, there exists a sitemap index which enumerates all the sitemaps under a specified search path. The existing implementation offers several customizable provisions:
+
+a. Exclusion of Pages: Pages can be excluded from the sitemap by adding the noindex tag to the SEO Robots Tags in the page properties.
+
+b. Customizable Storage Location: The location for storing sitemaps can be changed (default is /var/sitemaps).
+
+c. Extensibility: The sitemap generator can be extended to incorporate custom logic for excluding specific pages, such as those belonging to a particular template.
+
+d. Selector Configuration: Selectors can be configured to invoke the sitemap servlet.
+
+e. Additional Properties: Additional properties, such as changefrequency and priority, can be added to sitemap items besides loc and lastmod.
+
+Need for Extending the Core Implementation:
+Both of these approaches provided by the Adobe Core Sitemap components are limited to pages physically located within AEM. There is currently no provision for adding direct external links or incorporating dynamically generated links through code.
+
+Solution Approach:
+To address these limitations, we propose the following solution:
+
+Creation of a New Sitemap Index Servlet: This servlet will invoke the Adobe core sitemap index servlet via the Sling internal request processor. The sitemap links will be obtained by parsing the default sitemap-index servlet XML response.
+
+Dynamic Sitemap Scheduler: Implement a scheduler to generate sitemap files dynamically for each country and store them as binaries in the same location as the Adobe core sitemap.
+
+Integration with the New Sitemap Index Servlet: The dynamically generated sitemaps will be included in the new sitemap index servlet.
+
+Inclusion of Additional Configured External Sitemaps: The new sitemap index servlet will also accommodate directly configured external sitemaps.
+
+This approach ensures a comprehensive sitemap management solution, encompassing both internal AEM pages and external resources, thereby enhancing website indexing and visibility.
