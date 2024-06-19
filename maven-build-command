@@ -1,0 +1,17 @@
+Updates to keyboard shortcuts … On Thursday, August 1, 2024, Drive keyboard shortcuts will be updated to give you first-letters navigation.Learn more
+Archetype for 6.5
+-----------------
+
+mvn -B archetype:generate -D archetypeGroupId=com.adobe.granite.archetypes -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=23 -D aemVersion=6.5.0 -D appTitle="Lays" -D appId="lays" -D groupId="com.frito" -D frontendModule=none -D includeExamples=n
+
+mvn -B archetype:generate -D archetypeGroupId=com.adobe.granite.archetypes -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=23 -D aemVersion=6.5.0 -D appTitle="Dettol" -D appId="dettol" -D groupId="com.unilever" -D frontendModule=none -D includeExamples=n
+
+mvn -B archetype:generate -D archetypeGroupId=com.adobe.granite.archetypes -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=23 -D aemVersion=6.5.0 -D appTitle="Radar" -D appId="radar" -D groupId="edu.annauniversity" -D frontendModule=none -D includeExamples=n
+
+
+
+Archetype for cloud
+-------------------
+
+
+mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.2.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=37 -D appTitle="newsportal" -D appId="newsportal" -D groupId="com.newsportal" -D artifactId="newsportal" -D package="com.newsportal" -D version="0.0.1-SNAPSHOT" -D aemVersion="cloud"
