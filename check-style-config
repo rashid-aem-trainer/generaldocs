@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+    "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+    <module name="TreeWalker">
+        <!-- Import Control: Checks that classes, fields, or methods imported are not disallowed -->
+        <module name="IllegalImport"/>
+
+        <!-- AvoidStarImport: Checks that there are no star imports. -->
+        <module name="AvoidStarImport"/>
+
+        <!-- Class Design: Checks that classes have the correct design, such as finalization issues. -->
+        <module name="DesignForExtension"/>
+
+        <!-- Modifier Order: Ensures modifiers are in the correct order -->
+        <module name="ModifierOrder"/>
+
+        <!-- Empty Catch Block: Checks for empty catch blocks -->
+        <module name="EmptyCatchBlock"/>
+
+        <!-- Fall Through: Checks for switch fall through without a break statement -->
+        <module name="FallThrough"/>
+
+        <!-- Equals HashCode: Checks that the equals method is consistent with hashCode -->
+        <module name="EqualsHashCode"/>
+
+        <!-- Final Parameters: Enforces the use of final for method parameters -->
+        <module name="FinalParameters"/>
+
+        <!-- Avoid Nested Blocks: Detects nested blocks that can make code hard to read -->
+        <module name="AvoidNestedBlocks"/>
+
+        <!-- Illegal Token: Prohibits the use of certain Java tokens -->
+        <module name="IllegalToken"/>
+
+    </module>
+</module>
