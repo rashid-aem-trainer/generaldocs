@@ -1,0 +1,54 @@
+		<plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-checkstyle-plugin</artifactId>
+		    <version>3.1.2</version>
+		    <executions>
+		        <execution>
+		            <phase>package</phase>
+		            <goals>
+		                <goal>checkstyle</goal>
+		            </goals>
+		        </execution>
+		    </executions>
+		    <configuration>
+		        <skip>false</skip>
+		        <failsOnError>true</failsOnError>
+		        <consoleOutput>true</consoleOutput>
+		        <linkXRef>true</linkXRef>
+		        <configLocation>./core/src/main/resources/sun_checks.xml</configLocation>
+		        <includeResources>false</includeResources>
+		        <includeTestResources>false</includeTestResources>
+		    </configuration>
+		</plugin>   
+
+
+
+
+
+  Reporting 
+
+
+
+	<reporting>
+	<excludeDefaults>true</excludeDefaults>
+	        <plugins>
+	            <plugin>
+	                <groupId>org.apache.maven.plugins</groupId>
+	                <artifactId>maven-checkstyle-plugin</artifactId>
+	                <version>3.1.2</version> <!-- Use the latest stable version -->
+	                <reportSets>
+	                    <reportSet>
+	                        <reports>
+	                            <report>checkstyle</report>
+	                        </reports>
+	                    </reportSet>
+	                </reportSets>
+	                <configuration>
+	                    <configLocation>./core/src/main/resources/sun_checks.xml</configLocation>
+	                    <outputFileFormat>plain</outputFileFormat>
+	                    <outputFile>target/site/checkstyle.html</outputFile>
+	                </configuration>
+	            </plugin>
+	        </plugins>
+	    </reporting>  
+      
