@@ -1,0 +1,45 @@
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-pmd-plugin</artifactId>
+            <version>3.15.0</version> <!-- Use the latest stable version -->
+            <configuration>
+                <failOnViolation>false</failOnViolation> <!-- Fail build on rule violation -->
+                <rulesets>
+                    <ruleset>./src/main/resources/pmd.xml</ruleset> <!-- Custom ruleset file location -->
+                    <!-- <ruleset>/path/to/another-ruleset.xml</ruleset> -->
+                </rulesets>
+            </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>check</goal> <!-- Ensures that PMD checks are performed during the build -->
+                    </goals>
+                    <phase>verify</phase> <!-- Run PMD during the verify phase -->
+                </execution>
+            </executions>
+        </plugin>	
+
+
+
+
+
+
+
+
+
+
+
+	            <plugin>
+	                <groupId>org.apache.maven.plugins</groupId>
+	                <artifactId>maven-pmd-plugin</artifactId>
+	                <version>3.15.0</version>
+	                <reportSets>
+	                    <reportSet>
+	                        <reports>
+	                            <report>pmd</report> <!-- Generates PMD report -->
+	                        </reports>
+	                    </reportSet>
+	                </reportSets>
+	            </plugin>	 
+
+        
