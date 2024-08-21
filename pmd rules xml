@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="Comprehensive PMD Ruleset"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0
+             http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+
+    <description>
+        This comprehensive PMD ruleset is designed to ensure high code quality by enforcing best practices, design principles, security measures, and performance optimizations. It includes high and medium severity rules to address common coding issues.
+    </description>
+
+    <!-- Best Practices Rules -->
+    <rule ref="category/java/bestpractices.xml/AvoidReassigningParameters"/>
+    <rule ref="category/java/errorprone.xml/AvoidBranchingStatementAsLastInLoop"/>
+    <rule ref="category/java/bestpractices.xml/LiteralsFirstInComparisons"/>
+    <rule ref="category/java/bestpractices.xml/LooseCoupling"/>
+    <rule ref="category/java/bestpractices.xml/UseCollectionIsEmpty"/> <!-- Use isEmpty() on collections -->
+    <rule ref="category/java/bestpractices.xml/UnusedAssignment" />
+	<rule ref="category/java/bestpractices.xml/UnusedLocalVariable" />
+	<rule ref="category/java/bestpractices.xml/UnusedPrivateField" />
+	<rule ref="category/java/bestpractices.xml/SystemPrintln" /> <!-- Discourage use of System.out/err -->
+	<rule ref="category/java/bestpractices.xml/AvoidReassigningLoopVariables" />
+
+    <!-- Design Rules -->
+    <rule ref="category/java/design.xml/AvoidCatchingGenericException"/>
+    <rule ref="category/java/design.xml/AvoidThrowingRawExceptionTypes"/>
+    <rule ref="category/java/design.xml/AvoidThrowingNullPointerException"/>
+    <rule ref="category/java/design.xml/CouplingBetweenObjects">
+        <properties>
+            <property name="threshold" value="15"/> <!-- Custom threshold for coupling -->
+        </properties>
+    </rule>
+    <rule ref="category/java/design.xml/SimplifyBooleanExpressions"/>
+    <rule ref="category/java/design.xml/SimplifyConditional"/>
+    <rule ref="category/java/design.xml/ExcessiveImports"/>
+    <rule ref="category/java/design.xml/AvoidDeeplyNestedIfStmts"/>
+
+    <!-- Documentation Rules -->
+    <rule ref="category/java/documentation.xml/CommentRequired">
+    <properties>
+        <property name="methodWithOverrideCommentRequirement" value="Ignored" />
+        <property name="accessorCommentRequirement" value="Ignored" />
+        <property name="classCommentRequirement" value="Required" />
+        <property name="fieldCommentRequirement" value="Ignored" />
+        <property name="publicMethodCommentRequirement" value="Required" />
+        <property name="protectedMethodCommentRequirement" value="Ignored" />
+        <property name="enumCommentRequirement" value="Ignored" />
+        <property name="serialVersionUIDCommentRequired" value="Ignored" />
+        <property name="serialPersistentFieldsCommentRequired" value="Ignored" />
+    </properties>
+    </rule>
+    <rule ref="category/java/documentation.xml/CommentContent"/> <!-- Ensure meaningful comments -->    
+
+    <!-- Performance Rules -->
+    <rule ref="category/java/performance.xml/BigIntegerInstantiation"/>
+    <rule ref="category/java/performance.xml/UseArrayListInsteadOfVector"/>
+    <rule ref="category/java/performance.xml/AvoidArrayLoops"/>
+    <rule ref="category/java/performance.xml/UseStringBufferForStringAppends"/>
+
+    <!-- Code Style Rules -->
+    <rule ref="category/java/codestyle.xml/UnnecessaryConstructor" />
+    <rule ref="category/java/codestyle.xml/CommentDefaultAccessModifier"/>
+
+    
+    <!-- Unused Code Rules -->
+
+
+</ruleset>
