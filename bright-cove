@@ -1,0 +1,24 @@
+https://players.brightcove.net/1160438696001/RUsPQ8qzl_default/index.html?videoId=6337040883112
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brightcove Video Example</title>
+</head>
+<body>
+    <!-- Brightcove Player Embed -->
+    <div style="width: 100%; max-width: 640px; margin: auto;">
+        <video
+            data-account="YOUR_ACCOUNT_ID"
+            data-player="YOUR_PLAYER_ID"
+            data-video-id="YOUR_VIDEO_ID"
+            data-embed="default"
+            class="video-js"
+            controls>
+        </video>
+        <script src="https://players.brightcove.net/YOUR_ACCOUNT_ID/YOUR_PLAYER_ID_default/index.min.js"></script>
+    </div>
+</body>
+</html>
