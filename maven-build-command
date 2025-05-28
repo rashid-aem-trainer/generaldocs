@@ -2,6 +2,9 @@ Updates to keyboard shortcuts … On Thursday, August 1, 2024, Drive keyboard sh
 Archetype for 6.5
 -----------------
 
+New Command for 6.5.20
+mvn -B org.apache.maven.plugins:maven-archetype-plugin:3.3.1:generate -D archetypeGroupId=com.adobe.aem -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=52 -D appTitle="My Site" -D appId="mysite" -D groupId="com.mysite" -D aemVersion=6.5.20 -D frontendModule=general -D includeExamples=false
+
 mvn -B archetype:generate -D archetypeGroupId=com.adobe.granite.archetypes -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=23 -D aemVersion=6.5.0 -D appTitle="Lays" -D appId="lays" -D groupId="com.frito" -D frontendModule=none -D includeExamples=n
 
 mvn -B archetype:generate -D archetypeGroupId=com.adobe.granite.archetypes -D archetypeArtifactId=aem-project-archetype -D archetypeVersion=23 -D aemVersion=6.5.0 -D appTitle="Dettol" -D appId="dettol" -D groupId="com.unilever" -D frontendModule=none -D includeExamples=n
