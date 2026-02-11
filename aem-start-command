@@ -20,3 +20,6 @@ dryrun to preview affected nodes and current values
 node update to apply the change
 
 updated
+
+mvn -B archetype:generate -DarchetypeGroupId=com.adobe.aem  -DarchetypeArtifactId=aem-project-archetype -DaemVersion=cloud -DarchetypeVersion=56 -DgroupId=com.usbank -DartifactId=elavon  -Dversion=1.0.0-SNAPSHOT -Dpackage=com.usbank.elavon -DappId=elavon -DappTitle="Elavon" -DcomponentGroupName="Elavon Components" -DincludeExamples=n -DincludeFrontendModule=y -DfrontendModule=general -Dlanguage=en -DlanguageCountry=US
+
