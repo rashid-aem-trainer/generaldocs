@@ -1,0 +1,16 @@
+AEM start command
+java -jar -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=30303,suspend=n,server=y -Xmx1520m  aem-author-p4502.jar -nofork -gui
+
+MAVEN Project command
+mvn -B archetype:generate -DarchetypeGroupId=com.adobe.aem  -DarchetypeArtifactId=aem-project-archetype -DaemVersion=6.5.22 -DarchetypeVersion=56 -DgroupId=com.usbank -DartifactId=elavon  -Dversion=1.0.0-SNAPSHOT -Dpackage=com.usbank.elavon -DappId=elavon -DappTitle="Elavon" -DcomponentGroupName="Elavon Components" -DincludeExamples=n -DincludeFrontendModule=y -DfrontendModule=general -Dlanguage=en -DlanguageCountry=US
+
+Constraint Violation Exception in filevault-package-maven-plugin
+<configuration>
+    <validatorsSettings>
+        <jackrabbit-filter>
+            <options>
+                <validRoots>/apps/elavon,/apps/sling,/apps/msm</validRoots>
+            </options>
+        </jackrabbit-filter>
+    </validatorsSettings>
+</configuration>
